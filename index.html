@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalkulator Segitiga - Katik</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>Welcome to Katiga</h1>
+      <p>Hai Sobat, Selamat datang di Katiga :)<br>Sebuah web apps sederhana untuk membantu kamu menghitung nilai luas dan keliling segitiga</p>
+      <img src="https://imgix2.ruangguru.com/assets/miscellaneous/jpg_pogiei_1046.jpg" alt="Gambar Segitiga">
+      <div class="nav">
+        <button onclick="scrollToSection('luas-section')">Ayo mulai!</button>
+      </div>
+    </header>
+
+    <section id="luas-section" class="card">
+      <h2>Luas Segitiga</h2>
+      <p><strong>Rumus:</strong> L = 1/2 x a x t</p>
+      <form id="form-luas">
+        <input type="number" id="alas" placeholder="Nilai Alas" required>
+        <input type="number" id="tinggi" placeholder="Nilai Tinggi" required>
+        <div class="buttons">
+          <button type="submit">Hitung</button>
+          <button type="button" onclick="resetForm('form-luas', 'hasil-luas')" class="reset">Reset</button>
+        </div>
+        <div id="hasil-luas" class="hasil"></div>
+      </form>
+    </section>
+
+    <section id="keliling-section" class="card">
+      <h2>Keliling Segitiga</h2>
+      <p><strong>Rumus:</strong> K = S1 + S2 + S3</p>
+      <form id="form-keliling">
+        <input type="number" id="sisi1" placeholder="Sisi A" required>
+        <input type="number" id="sisi2" placeholder="Sisi B" required>
+        <input type="number" id="sisi3" placeholder="Sisi C" required>
+        <div class="buttons">
+          <button type="submit">Hitung</button>
+          <button type="button" onclick="resetForm('form-keliling', 'hasil-keliling')" class="reset">Reset</button>
+        </div>
+        <div id="hasil-keliling" class="hasil"></div>
+      </form>
+    </section>
+
+    <footer>
+      <p>&copy; Katiga 2025. All Rights Reserved.</p>
+    </footer>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
